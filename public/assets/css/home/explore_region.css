@@ -1,0 +1,31 @@
+/* SECTION 4 AWAL */
+.regions{
+
+    padding:100px 0;
+}
+
+.region-card{
+
+    background:#17233f;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.region-card:hover{
+
+    background:#38bdf8;
+
+    transform:
+    translateY(-8px);
+}
+/* SECTION 4 SELESAI */

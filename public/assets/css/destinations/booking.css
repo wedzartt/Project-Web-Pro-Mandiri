@@ -1,0 +1,268 @@
+/* ==========================
+   SUMMARY PAGE
+========================== */
+
+.summary-page{
+
+    padding-top:140px;
+
+    padding-bottom:120px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.summary-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.summary-badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:#17233f;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+}
+
+.summary-header h1{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.summary-header p{
+
+    color:#cbd5e1;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.summary-card{
+
+    background:#17233f;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+}
+
+.summary-card h3{
+
+    margin-bottom:25px;
+
+    font-weight:700;
+}
+
+.summary-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+.summary-info label{
+
+    color:#94a3b8;
+
+    font-size:.9rem;
+
+    margin-bottom:5px;
+
+    display:block;
+}
+
+.summary-info p{
+
+    margin:0;
+
+    font-size:1.05rem;
+
+    font-weight:500;
+}
+
+.notes{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+}
+
+/* ==========================
+   PRICE CARD
+========================== */
+
+.price-card{
+
+    background:#17233f;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    position:sticky;
+
+    top:120px;
+}
+
+.booking-code{
+
+    background:#0f172a;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    color:#38bdf8;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+.price-card h3{
+
+    margin-bottom:20px;
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+    color:#cbd5e1;
+}
+
+.total-price{
+
+    margin-top:20px;
+}
+
+.total-price span{
+
+    color:#94a3b8;
+}
+
+.total-price h2{
+
+    margin-top:10px;
+
+    color:#38bdf8;
+
+    font-weight:800;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn-payment{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-top:25px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-payment:hover{
+
+    background:#0ea5e9;
+
+    color:white;
+}
+
+.btn-edit{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:white;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .summary-info{
+
+        grid-template-columns:1fr;
+    }
+
+    .price-card{
+
+        position:relative;
+
+        top:0;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .summary-header h1{
+
+        font-size:2.2rem;
+    }
+
+}

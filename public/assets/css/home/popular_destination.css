@@ -1,0 +1,114 @@
+/* SECTION 5 */
+
+.popular-destination{
+
+    padding:120px 0;
+}
+
+.destination-card{
+
+    background:#17233f;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    height:100%;
+}
+
+.destination-card:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.3);
+}
+
+.destination-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+}
+
+.destination-content{
+
+    padding:25px;
+}
+
+.destination-location{
+
+    color:#38bdf8;
+
+    margin-bottom:10px;
+
+    font-size:.9rem;
+}
+
+.destination-content h3{
+
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.destination-content p{
+
+    color:#cbd5e1;
+
+    min-height:50px;
+}
+
+.destination-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:25px;
+}
+
+.price-label{
+
+    color:#94a3b8;
+
+    font-size:.85rem;
+}
+
+.destination-bottom h5{
+
+    margin-top:5px;
+
+    margin-bottom:0;
+
+    font-weight:700;
+}
+
+.btn-destination{
+
+    background:#38bdf8;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.btn-destination:hover{
+
+    background:#0ea5e9;
+
+    color:white;
+}

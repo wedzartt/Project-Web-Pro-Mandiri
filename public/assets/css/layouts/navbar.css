@@ -1,0 +1,60 @@
+/* NAVBAR */
+
+.custom-navbar{
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    z-index: 9999;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: all .3s ease;
+}
+
+.logo{
+    color:white;
+    font-weight:700;
+}
+
+.nav-link{
+    color:white !important;
+    margin:0 10px;
+}
+
+.btn-login{
+
+    text-decoration:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+}
+
+
+/* efek saat scroll di navbar*/
+    .custom-navbar.scrolled{
+
+        background: rgba(15,23,42,0.95);
+
+        box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+        border: 1px solid rgba(255,255,255,.1);
+    }

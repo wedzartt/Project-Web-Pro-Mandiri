@@ -1,0 +1,51 @@
+/* SECTION 2 AWAL*/
+.search-section{
+
+    /* margin-top:-20px; */
+
+    position:relative;
+
+    z-index:10;
+}
+
+.search-box{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#17233f;
+
+    color:white;
+}
+
+.search-box button{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#38bdf8;
+
+    color:white;
+}
+/* SECTION 2 SELESAI */

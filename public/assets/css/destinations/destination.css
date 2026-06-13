@@ -1,0 +1,285 @@
+/* ==========================
+   HERO
+========================== */
+
+.destination-hero{
+
+    padding-top:140px;
+
+    padding-bottom:70px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(59,130,246,.15),
+        transparent 70%
+    );
+}
+
+.hero-wrapper{
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+.destination-badge{
+
+    background:#17233f;
+
+    color:#38bdf8;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    display:inline-block;
+
+    margin-bottom:25px;
+}
+
+.destination-hero h1{
+
+    font-size:3.5rem;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+.destination-hero p{
+
+    color:#cbd5e1;
+
+    font-size:1.1rem;
+}
+
+/* ==========================
+   FILTER
+========================== */
+
+.destination-filter{
+
+    margin-bottom:80px;
+}
+
+.filter-box{
+
+    background:#17233f;
+
+    padding:30px;
+
+    border-radius:25px;
+}
+
+.filter-box input,
+.filter-box select{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:0 15px;
+}
+
+.filter-box button{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#38bdf8;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.filter-box button:hover{
+
+    background:#0ea5e9;
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+
+    font-size:2.5rem;
+
+    font-weight:700;
+}
+
+.section-heading p{
+
+    color:#cbd5e1;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.destination-list{
+
+    padding-bottom:80px;
+}
+
+.destination-card{
+
+    background:#17233f;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    height:100%;
+}
+
+.destination-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+}
+
+.destination-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+}
+
+.destination-content{
+
+    padding:25px;
+}
+
+.location{
+
+    color:#38bdf8;
+
+    font-size:.9rem;
+}
+
+.destination-content h3{
+
+    margin-top:10px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+}
+
+.destination-content p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    min-height:70px;
+}
+
+.card-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:25px;
+}
+
+.card-bottom small{
+
+    color:#94a3b8;
+}
+
+.card-bottom h5{
+
+    margin-top:5px;
+
+    margin-bottom:0;
+
+    font-weight:700;
+}
+
+.btn-detail{
+
+    background:#38bdf8;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.btn-detail:hover{
+
+    background:#0ea5e9;
+
+    color:white;
+}
+
+/* ==========================
+   LOAD MORE
+========================== */
+
+.load-more-section{
+
+    padding-bottom:120px;
+}
+
+.load-more-btn{
+
+    background:#17233f;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.load-more-btn:hover{
+
+    background:#38bdf8;
+}
