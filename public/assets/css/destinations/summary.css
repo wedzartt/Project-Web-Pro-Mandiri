@@ -1,0 +1,447 @@
+/* ==========================
+   SUMMARY PAGE
+========================== */
+
+.summary-page{
+
+    padding-top:140px;
+
+    padding-bottom:120px;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(56,189,248,.12),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at bottom left,
+        rgba(59,130,246,.08),
+        transparent 35%
+    );
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.summary-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.summary-badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#38bdf8;
+
+    backdrop-filter:blur(10px);
+
+    margin-bottom:20px;
+
+    font-weight:600;
+}
+
+.summary-header h1{
+
+    font-size:3.5rem;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+    letter-spacing:-1px;
+}
+
+.summary-header p{
+
+    color:#94a3b8;
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:1.05rem;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.summary-card{
+
+    background:#17233f;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.summary-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.25);
+}
+
+.summary-card h2{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+}
+
+/* ==========================
+   SUMMARY GRID
+========================== */
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+.summary-grid label{
+
+    display:block;
+
+    color:#94a3b8;
+
+    font-size:.85rem;
+
+    margin-bottom:8px;
+}
+
+.summary-grid p{
+
+    margin:0;
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+    color:white;
+}
+
+/* ==========================
+   NOTES
+========================== */
+
+.notes{
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+
+    background:#0f172a;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.05);
+}
+
+/* ==========================
+   ORDER SUMMARY
+========================== */
+
+.price-card{
+
+    background:#17233f;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    position:sticky;
+
+    top:120px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.2);
+}
+
+.booking-code{
+
+    background:#0f172a;
+
+    border:1px solid rgba(56,189,248,.2);
+
+    color:#38bdf8;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+.price-card h3{
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    color:#cbd5e1;
+}
+
+.price-row span:last-child{
+
+    font-weight:600;
+}
+
+.price-card hr{
+
+    border-color:
+    rgba(255,255,255,.08);
+
+    margin:25px 0;
+}
+
+/* ==========================
+   TOTAL PRICE
+========================== */
+
+.total-price{
+
+    text-align:center;
+
+    margin-top:10px;
+}
+
+.total-price span{
+
+    color:#94a3b8;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+.total-price h2{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#38bdf8;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn-payment{
+
+    display:block;
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    margin-top:30px;
+
+    transition:.3s;
+}
+
+.btn-payment:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 30px rgba(56,189,248,.3);
+
+    color:white;
+}
+
+.btn-edit{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    transition:.3s;
+}
+
+.btn-edit:hover{
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+}
+
+/* HERO */
+
+.destination-detail-hero{
+
+    height:70vh;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.destination-detail-hero img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.6)
+    );
+
+    display:flex;
+
+    align-items:end;
+
+    padding-bottom:80px;
+}
+
+.hero-overlay h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    margin-top:10px;
+}
+
+.location{
+
+    background:#38bdf8;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .price-card{
+
+        position:relative;
+
+        top:0;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .summary-header h1{
+
+        font-size:2.3rem;
+    }
+
+    .summary-card,
+    .price-card{
+
+        padding:25px;
+    }
+
+    .destination-preview img{
+
+        height:220px;
+    }
+
+}

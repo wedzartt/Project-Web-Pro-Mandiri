@@ -2,73 +2,124 @@
 
 <?= $this->section('content') ?>
 
-<section class="summary-page">
 
-    <div class="container">
+<section class="destination-detail-hero">
 
-        <!-- PAGE HEADER -->
+    <img
+        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5"
+        alt="Raja Ampat">
 
-        <div class="summary-header">
+    <div class="hero-overlay">
 
-            <span class="summary-badge">
-                Journey Summary
+        <div class="container">
+
+            <span class="location">
+                Papua Barat
             </span>
 
             <h1>
-                Review Your Booking
+                Raja Ampat
             </h1>
 
             <p>
-                Please review your travel information before proceeding to payment.
+                Discover one of the world's
+                most beautiful marine destinations.
             </p>
 
         </div>
 
-        <div class="row g-4">
+    </div>
 
-            <!-- LEFT CONTENT -->
+</section>
+
+<section class="summary-page">
+
+    <div class="container">
+
+        <div class="row g-4">
 
             <div class="col-lg-8">
 
-                <!-- DESTINATION -->
-
                 <div class="summary-card">
 
-                    <h3>
-                        Destination Information
-                    </h3>
+                    <h2>
 
-                    <div class="summary-info">
+                        Journey Information
+
+                    </h2>
+
+                    <div class="summary-grid">
 
                         <div>
 
-                            <label>Destination</label>
+                            <label>
+                                Destination
+                            </label>
 
-                            <p>Raja Ampat</p>
+                            <p>
+                                <?= esc($destination_name) ?>
+                            </p>
 
                         </div>
 
                         <div>
 
-                            <label>Location</label>
+                            <label>
+                                Travel Date
+                            </label>
 
-                            <p>Papua Barat</p>
-
-                        </div>
-
-                        <div>
-
-                            <label>Travel Date</label>
-
-                            <p>20 June 2026</p>
+                            <p>
+                                <?= esc($travel_date) ?>
+                            </p>
 
                         </div>
 
                         <div>
 
-                            <label>Travelers</label>
+                            <label>
+                                Travelers
+                            </label>
 
-                            <p>2 Person</p>
+                            <p>
+                                <?= esc($travelers) ?>
+                                Person
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <p>
+                                <?= esc($fullname) ?>
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label>
+                                Email
+                            </label>
+
+                            <p>
+                                <?= esc($email) ?>
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label>
+                                Phone
+                            </label>
+
+                            <p>
+                                <?= esc($phone) ?>
+                            </p>
 
                         </div>
 
@@ -76,55 +127,17 @@
 
                 </div>
 
-                <!-- TRAVELER -->
-
                 <div class="summary-card">
 
-                    <h3>
-                        Traveler Information
-                    </h3>
+                    <h2>
 
-                    <div class="summary-info">
-
-                        <div>
-
-                            <label>Full Name</label>
-
-                            <p>Ariq Zafran</p>
-
-                        </div>
-
-                        <div>
-
-                            <label>Email</label>
-
-                            <p>ariq@email.com</p>
-
-                        </div>
-
-                        <div>
-
-                            <label>Phone Number</label>
-
-                            <p>08123456789</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- NOTES -->
-
-                <div class="summary-card">
-
-                    <h3>
                         Special Notes
-                    </h3>
+
+                    </h2>
 
                     <p class="notes">
 
-                        Vegetarian meals preferred.
+                        <?= esc($special_notes) ?>
 
                     </p>
 
@@ -132,32 +145,38 @@
 
             </div>
 
-            <!-- RIGHT CONTENT -->
-
             <div class="col-lg-4">
 
                 <div class="price-card">
 
-                    <div class="booking-code">
+                    <?php
+                    $subtotal =
+                        $price *
+                        $travelers;
 
-                        BOOK-20260613-001
+                    $service =
+                        50000;
 
-                    </div>
+                    $total =
+                        $subtotal +
+                        $service;
+                    ?>
 
                     <h3>
-                        Order Summary
-                    </h3>
 
-                    <hr>
+                        Order Summary
+
+                    </h3>
 
                     <div class="price-row">
 
                         <span>
-                            Price / Person
+                            Price
                         </span>
 
                         <span>
-                            Rp 1.500.000
+                            Rp
+                            <?= number_format($price, 0, ',', '.') ?>
                         </span>
 
                     </div>
@@ -169,7 +188,7 @@
                         </span>
 
                         <span>
-                            2
+                            <?= $travelers ?>
                         </span>
 
                     </div>
@@ -190,27 +209,38 @@
 
                     <div class="total-price">
 
-                        <span>Total</span>
+                        <span>
+                            Total
+                        </span>
 
                         <h2>
-                            Rp 3.050.000
+
+                            Rp
+                            <?= number_format(
+                                $total,
+                                0,
+                                ',',
+                                '.'
+                            ) ?>
+
                         </h2>
 
                     </div>
 
-                    <a href="<?= base_url('/payment') ?>"
-                       class="btn-payment">
+                    <form
+                        action="<?= base_url('/payment') ?>"
+                        method="POST">
 
-                        Continue Payment
+                        <?= csrf_field() ?>
 
-                    </a>
+                        <button
+                            class="btn-payment">
 
-                    <a href="javascript:history.back()"
-                       class="btn-edit">
+                            Continue Payment
 
-                        Edit Booking
+                        </button>
 
-                    </a>
+                    </form>
 
                 </div>
 

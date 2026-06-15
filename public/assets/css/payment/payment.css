@@ -1,0 +1,240 @@
+.payment-page{
+
+    padding-top:140px;
+
+    padding-bottom:120px;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(56,189,248,.08),
+        transparent 40%
+    );
+}
+
+/* HEADER */
+
+.payment-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.payment-badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:#17233f;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+}
+
+.payment-header h1{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.payment-header p{
+
+    color:#94a3b8;
+}
+
+/* CARD */
+
+.payment-card{
+
+    background:#17233f;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.payment-card h3{
+
+    margin-bottom:25px;
+
+    font-weight:700;
+}
+
+/* GRID */
+
+.payment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.payment-option{
+
+    cursor:pointer;
+}
+
+.payment-option input{
+
+    display:none;
+}
+
+.option-content{
+
+    background:#0f172a;
+
+    border:2px solid transparent;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    min-height:100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.option-content img{
+
+    max-height:40px;
+
+    margin-bottom:10px;
+}
+
+.payment-option input:checked
++ .option-content{
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,.2);
+}
+
+/* ORDER */
+
+.order-card{
+
+    background:#17233f;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    position:sticky;
+
+    top:120px;
+}
+
+.booking-code{
+
+    background:#0f172a;
+
+    color:#38bdf8;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+}
+
+.total{
+
+    color:#38bdf8;
+
+    font-weight:700;
+}
+
+.btn-pay{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    margin-top:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn-pay:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 30px
+    rgba(56,189,248,.3);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .payment-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .order-card{
+
+        position:relative;
+
+        top:0;
+    }
+
+}

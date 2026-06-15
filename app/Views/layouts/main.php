@@ -12,7 +12,7 @@
 
     <!-- Link Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Link CSS GLOBAL -->
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
@@ -56,6 +56,18 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/destinations/booking.css') ?>">
     <!-- Link CSS untuk destinations -->
 
+    <!-- Link CSS untuk payment -->
+    <!-- PAYMENT -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/payment/payment.css') ?>">
+    <!-- Link CSS untuk payment -->
+
+    <link rel="stylesheet" href="<?= base_url('assets/css/succes/succes.css') ?>">
+
+
+    <!-- Link CSS untuk destinations -->
+
+    <link rel="stylesheet" href="<?= base_url('assets/css/journey/journey.css') ?>">
+
 
 
 </head>
@@ -76,4 +88,4 @@
 
 </body>
 
-</html> 
+</html>

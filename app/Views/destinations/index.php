@@ -136,59 +136,57 @@
 
         <div class="row g-4">
 
-            <?php for($i=1; $i<=9; $i++) : ?>
+            <?php for ($i = 1; $i <= 9; $i++) : ?>
 
-            <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
 
-                <div class="destination-card">
+                    <div class="destination-card">
 
-                    <img
-                        src="https://picsum.photos/600/400?random=<?= $i ?>"
-                        alt="Destination">
+                        <img
+                            src="https://picsum.photos/600/400?random=<?= $i ?>"
+                            alt="Destination">
 
-                    <div class="destination-content">
+                        <div class="destination-content">
 
-                        <span class="location">
-                            📍 Papua Barat
-                        </span>
+                            <span class="location">
+                                📍 Papua Barat
+                            </span>
 
-                        <h3>
-                            Raja Ampat
-                        </h3>
+                            <h3>
+                                Raja Ampat
+                            </h3>
 
-                        <p>
-                            One of Indonesia's most beautiful
-                            marine tourism destinations.
-                        </p>
+                            <p>
+                                One of Indonesia's most beautiful
+                                marine tourism destinations.
+                            </p>
 
-                        <div class="card-bottom">
+                            <div class="card-bottom">
 
-                            <div>
+                                <div>
 
-                                <small>
-                                    Starting From
-                                </small>
+                                    <small>
+                                        Starting From
+                                    </small>
 
-                                <h5>
-                                    Rp 1.500.000
-                                </h5>
+                                    <h5>
+                                        Rp 1.500.000
+                                    </h5>
+
+                                </div>
+
+                                <a href="<?= base_url('destinations/' . $i) ?>"
+                                    class="btn btn-primary mt-2">
+                                    View Detail
+                                </a>
 
                             </div>
-
-                            <a href="<?= base_url('/destinations/'.$i) ?>"
-                               class="btn-detail">
-
-                                Detail
-
-                            </a>
 
                         </div>
 
                     </div>
 
                 </div>
-
-            </div>
 
             <?php endfor ?>
 

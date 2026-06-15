@@ -32,79 +32,129 @@
     </div>
 
 </section>
-
-<!-- MAIN CONTENT -->
+<!-- ACUAN YG DIATAS TIDAK DIUBAH -->
 
 <section class="destination-detail">
 
     <div class="container">
 
-        <div class="row">
+        <div class="row g-4">
 
-            <!-- LEFT -->
-
-            <div class="col-lg-8">
+            <!-- LEFT CONTENT -->
+            <div class="row justify-content-center">
 
                 <!-- DESCRIPTION -->
-
                 <div class="detail-section">
 
-                    <h2>
-                        About Destination
-                    </h2>
+                    <h2>About Destination</h2>
 
                     <p>
-                        Raja Ampat is known for its
-                        crystal-clear waters,
-                        diverse marine life,
-                        and breathtaking islands.
+                        Raja Ampat is one of Indonesia's most remarkable marine
+                        destinations, located in Southwest Papua. Renowned for its
+                        crystal-clear waters, vibrant coral reefs, and extraordinary
+                        biodiversity, the archipelago is home to more than 1,500
+                        small islands and some of the richest marine ecosystems on Earth.
+                    </p>
+
+                    <p>
+                        Visitors can enjoy world-class snorkeling and diving experiences,
+                        explore hidden lagoons, trek to panoramic viewpoints, and immerse
+                        themselves in the unique culture of local communities. Raja Ampat
+                        offers an unforgettable experience for nature lovers, photographers,
+                        and adventure seekers alike.
                     </p>
 
                 </div>
 
-                <!-- GALLERY -->
-
+                <!-- BARU INFORMATION CARD -->
                 <div class="detail-section">
 
-                    <h2>
-                        Gallery
-                    </h2>
+                    <h2>Destination Information</h2>
+
+                    <div class="info-grid">
+
+                        <div class="info-card">
+                            <h4>📍 Location</h4>
+                            <p>West Papua, Indonesia</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4>⏳ Duration</h4>
+                            <p>3 Days 2 Nights</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4>🌤 Best Season</h4>
+                            <p>October - April</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4>👥 Capacity</h4>
+                            <p>Up to 20 Travelers</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4>🚤 Activities</h4>
+                            <p>Snorkeling, Island Hopping, Diving</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4>⭐ Rating</h4>
+                            <p>4.9 / 5.0</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- BARU INFORMATION CARD -->
+
+                <!-- GALLERY -->
+                <div class="detail-section">
+
+                    <h2>Gallery</h2>
 
                     <div class="gallery-grid">
 
                         <img src="https://picsum.photos/500/300?1">
-
                         <img src="https://picsum.photos/500/300?2">
-
                         <img src="https://picsum.photos/500/300?3">
-
                         <img src="https://picsum.photos/500/300?4">
 
                     </div>
 
                 </div>
 
-                <!-- FACILITIES -->
-
+                <!-- HIGHLIGHTS -->
                 <div class="detail-section">
 
-                    <h2>
-                        Facilities
-                    </h2>
+                    <h2>Highlights</h2>
+
+                    <ul class="highlight-list">
+
+                        <li>✓ Explore pristine islands and hidden lagoons</li>
+                        <li>✓ Experience world-class snorkeling spots</li>
+                        <li>✓ Enjoy breathtaking sunrise and sunset views</li>
+                        <li>✓ Capture unforgettable moments with stunning landscapes</li>
+                        <li>✓ Discover local culture and traditions</li>
+
+                    </ul>
+
+                </div>
+                <!-- HIGHLIGHTS -->
+
+                <!-- FACILITIES -->
+                <div class="detail-section">
+
+                    <h2>Facilities</h2>
 
                     <div class="facility-list">
 
-                        <div>✓ Tour Guide</div>
-
-                        <div>✓ Hotel</div>
-
-                        <div>✓ Transportation</div>
-
-                        <div>✓ Snorkeling</div>
-
-                        <div>✓ Documentation</div>
-
-                        <div>✓ Meals</div>
+                        <div class="facility-item">✓ Tour Guide</div>
+                        <div class="facility-item">✓ Hotel</div>
+                        <div class="facility-item">✓ Transportation</div>
+                        <div class="facility-item">✓ Snorkeling</div>
+                        <div class="facility-item">✓ Documentation</div>
+                        <div class="facility-item">✓ Meals</div>
 
                     </div>
 
@@ -112,55 +162,166 @@
 
             </div>
 
-            <!-- RIGHT -->
+        </div>
 
-            <div class="col-lg-4">
+    </div>
 
-                <div class="booking-card">
+</section>
 
-                    <h3>
-                        Rp 1.500.000
-                    </h3>
+<!-- AKHIR YANG AKAN DIUBAH -->
 
-                    <span>
-                        per person
-                    </span>
 
-                    <form>
+<!-- YANG AKAN DIUBAH MAIN CONTENT -->
 
-                        <label>
-                            Departure Date
-                        </label>
+<section class="booking-page">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-8">
+
+                <div class="booking-form-card">
+
+                    <div class="section-title">
+                        <h2>Traveler Information</h2>
+                        <p>Please fill in your details to complete the booking.</p>
+                    </div>
+
+                    <form action="<?= base_url('booking/summary') ?>" method="POST">
+
+                        <?= csrf_field() ?>
 
                         <input
-                            type="date"
-                            class="form-control">
-
-                        <label>
-                            Travelers
-                        </label>
+                            type="hidden"
+                            name="destination_id"
+                            value="<?= $id ?>">
 
                         <input
-                            type="number"
-                            class="form-control"
-                            min="1">
+                            type="hidden"
+                            name="destination_name"
+                            value="Raja Ampat">
 
-                        <label>
-                            Notes
-                        </label>
+                        <input
+                            type="hidden"
+                            name="price"
+                            value="1500000">
 
-                        <textarea
-                            class="form-control"
-                            rows="4">
-                        </textarea>
+                        <div class="row g-4">
 
-                        <button
-                            type="submit"
-                            class="btn-book">
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Full Name
+                                </label>
 
-                            Book Journey
+                                <input
+                                    type="text"
+                                    class="booking-input"
+                                    name="fullname"
+                                    placeholder="Enter your full name">
+                            </div>
 
-                        </button>
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="booking-input"
+                                    name="email"
+                                    placeholder="Enter your email">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="booking-input"
+                                    name="phone"
+                                    placeholder="Enter phone number">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Travelers
+                                </label>
+
+                                <input
+                                    type="number"
+                                    class="booking-input"
+                                    name="travelers"
+                                    min="1"
+                                    value="1">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Travel Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="booking-input"
+                                    name="travel_date">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="booking-label">
+                                    Estimated Total
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="booking-input"
+                                    value="Rp 1.500.000"
+                                    readonly>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="booking-label">
+                                    Special Notes
+                                </label>
+
+                                <textarea
+                                    class="booking-textarea"
+                                    rows="5"
+                                    placeholder="Tell us anything we should know..."
+                                    name="special_notes">
+                                
+                                </textarea>
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="booking-agreement">
+
+                                    <input type="checkbox">
+
+                                    <span>
+                                        I agree to Terms & Conditions
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <button
+                                    class="btn-confirm-booking">
+
+                                    Confirm Booking
+
+                                </button>
+
+                            </div>
+
+                        </div>
 
                     </form>
 
@@ -168,220 +329,67 @@
 
             </div>
 
-        </div>
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-4">
 
-    </div>
+                <div class="booking-summary sticky-top">
 
-</section>
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5"
+                        class="summary-image">
 
-<!-- AWAL UNTUK BOOKING FORM -->
-<section class="booking-section">
+                    <h3>
+                        Rp 1.500.000
+                    </h3>
 
-    <div class="container">
+                    <span class="price-subtitle">
+                        per person
+                    </span>
 
-        <div class="booking-wrapper">
+                    <hr>
 
-            <div class="booking-header">
+                    <h5>
+                        Booking Summary
+                    </h5>
 
-                <span>
-                    Start Your Adventure
-                </span>
+                    <div class="summary-item">
+                        <span>Destination</span>
+                        <strong>Raja Ampat</strong>
+                    </div>
 
-                <h2>
-                    Book Your Journey
-                </h2>
+                    <div class="summary-item">
+                        <span>Travel Date</span>
+                        <strong>Not Selected</strong>
+                    </div>
 
-                <p>
-                    Complete the form below to reserve your trip.
-                </p>
+                    <div class="summary-item">
+                        <span>Travelers</span>
+                        <strong>1 Traveler</strong>
+                    </div>
 
-            </div>
+                    <hr>
 
-            <form action="#" method="POST">
+                    <div class="summary-total">
 
-                <div class="row g-4">
+                        <span>Total</span>
 
-                    <!-- Destination -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Destination
-
-                        </label>
-
-                        <input
-                            type="text"
-                            class="booking-input"
-                            value="Raja Ampat"
-                            readonly>
+                        <h4>
+                            Rp 1.500.000
+                        </h4>
 
                     </div>
 
-                    <!-- Price -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Price Per Person
-
-                        </label>
-
-                        <input
-                            type="text"
-                            class="booking-input"
-                            value="Rp 1.500.000"
-                            readonly>
-
-                    </div>
-
-                    <!-- Date -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Travel Date
-
-                        </label>
-
-                        <input
-                            type="date"
-                            class="booking-input"
-                            name="travel_date">
-
-                    </div>
-
-                    <!-- Travelers -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Travelers
-
-                        </label>
-
-                        <input
-                            type="number"
-                            class="booking-input"
-                            name="travelers"
-                            min="1"
-                            value="1">
-
-                    </div>
-
-                    <!-- Full Name -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Full Name
-
-                        </label>
-
-                        <input
-                            type="text"
-                            class="booking-input"
-                            name="fullname">
-
-                    </div>
-
-                    <!-- Email -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Email
-
-                        </label>
-
-                        <input
-                            type="email"
-                            class="booking-input"
-                            name="email">
-
-                    </div>
-
-                    <!-- Phone -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Phone Number
-
-                        </label>
-
-                        <input
-                            type="text"
-                            class="booking-input"
-                            name="phone">
-
-                    </div>
-
-                    <!-- Total -->
-
-                    <div class="col-md-6">
-
-                        <label class="booking-label">
-
-                            Estimated Total
-
-                        </label>
-
-                        <input
-                            type="text"
-                            class="booking-input"
-                            value="Rp 1.500.000"
-                            readonly>
-
-                    </div>
-
-                    <!-- Notes -->
-
-                    <div class="col-12">
-
-                        <label class="booking-label">
-
-                            Special Notes
-
-                        </label>
-
-                        <textarea
-                            rows="5"
-                            class="booking-textarea"
-                            name="notes"
-                            placeholder="Tell us anything we should know..."></textarea>
-
-                    </div>
-
-                    <!-- Submit -->
-
-                    <div class="col-12">
-
-                        <button
-                            type="submit"
-                            class="btn-booking">
-
-                            Book Journey
-
-                        </button>
-
-                    </div>
+                    <button class="btn-book">
+                        Confirm Booking
+                    </button>
 
                 </div>
 
-            </form>
+            </div>
 
         </div>
 
     </div>
 
 </section>
-
 <?= $this->endSection() ?>

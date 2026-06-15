@@ -26,4 +26,17 @@ class Wisata extends BaseController
             ]
         );
     }
+
+    public function proses()
+    {
+        // Mengambil semua data yang dikirim via POST
+        $dataKirim = $this->request->getPost();
+
+        // Debugging: Program berhenti di sini dan menampilkan isi variabel
+        // dd($dataKirim);
+        
+        // Kode di bawah ini tidak akan jalan selama ada dd() di atas
+        // return redirect()->to('/form'); 
+    }
+
 }

@@ -266,3 +266,95 @@
     }
 
 }
+
+
+.booking-page{
+    padding:80px 0;
+    background:#07122d;
+}
+
+.booking-form-card{
+    background:#111f46;
+    padding:40px;
+    border-radius:30px;
+}
+
+.booking-summary{
+    background:#09152f;
+    padding:30px;
+    border-radius:30px;
+    position: sticky;
+    top:120px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.summary-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.booking-input,
+.booking-textarea{
+
+    width:100%;
+    background:#081327;
+    border:none;
+    border-radius:16px;
+    padding:16px;
+    color:white;
+
+}
+
+.booking-input:focus,
+.booking-textarea:focus{
+
+    outline:none;
+    border:1px solid #35b6ff;
+
+}
+
+.summary-item{
+
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+
+}
+
+.summary-total{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.btn-confirm-booking,
+.btn-book{
+
+    width:100%;
+    background:#38bdf8;
+    border:none;
+    padding:16px;
+    border-radius:18px;
+    font-weight:600;
+    color:white;
+
+}
+
+.booking-label{
+    margin-bottom:10px;
+    display:block;
+    font-weight:500;
+}
+
+.booking-agreement{
+
+    display:flex;
+    gap:10px;
+    align-items:center;
+
+}
