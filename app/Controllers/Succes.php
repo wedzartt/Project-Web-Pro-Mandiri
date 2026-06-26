@@ -2,16 +2,16 @@
 
 namespace App\Controllers;
 
-class Succes extends BaseController
+class Wisata extends BaseController
 {
-    public function index()
+    public function success()
     {
+        $bookingId =
+            $this->request->getPost('booking_id');
+
+
         return view(
-            'succes/index',
-            [
-                'title' => 'Succes Page',
-                'page'  => 'Succes'
-            ]
+            'payment/success' / $bookingId
         );
     }
 }

@@ -46,7 +46,7 @@
 
             </ul>
 
-            <a href="#" class="btn-login">
+            <a href="<?= base_url('/login') ?>" class="btn-login">
                 Login
             </a>
 

@@ -57,7 +57,7 @@
                             </label>
 
                             <p>
-                                <?= esc($destination_name) ?>
+                                Raja Ampat
                             </p>
 
                         </div>
@@ -69,7 +69,7 @@
                             </label>
 
                             <p>
-                                <?= esc($travel_date) ?>
+                                Raja Ampat
                             </p>
 
                         </div>
@@ -149,18 +149,6 @@
 
                 <div class="price-card">
 
-                    <?php
-                    $subtotal =
-                        $price *
-                        $travelers;
-
-                    $service =
-                        50000;
-
-                    $total =
-                        $subtotal +
-                        $service;
-                    ?>
 
                     <h3>
 
@@ -176,7 +164,7 @@
 
                         <span>
                             Rp
-                            <?= number_format($price, 0, ',', '.') ?>
+                            <?= number_format($total_price, 0, ',', '.') ?>
                         </span>
 
                     </div>
@@ -208,7 +196,7 @@
                     <hr>
 
                     <div class="total-price">
-
+    
                         <span>
                             Total
                         </span>
@@ -217,7 +205,7 @@
 
                             Rp
                             <?= number_format(
-                                $total,
+                                $total_price,
                                 0,
                                 ',',
                                 '.'
@@ -228,7 +216,7 @@
                     </div>
 
                     <form
-                        action="<?= base_url('/payment') ?>"
+                        action="<?= base_url('payment') ?>"
                         method="POST">
 
                         <?= csrf_field() ?>

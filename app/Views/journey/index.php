@@ -91,7 +91,7 @@
 
                         <p>
 
-                            20 June 2026
+                            <?= $booking['travel_date']  ?>
 
                         </p>
 
@@ -107,7 +107,27 @@
 
                         <p>
 
-                            2 Person
+                            <?= $booking['travelers']  ?>
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <label>
+
+                            Total Price
+
+                        </label>
+
+                        <p>
+
+                            <?= number_format($booking['total_price'],
+                            0,
+                            ',',
+                            '.'
+                            )?>
 
                         </p>
 
@@ -123,7 +143,7 @@
 
                         <p>
 
-                            BOOK-20260614-001
+                            <?= $transaction['booking_id']  ?>
 
                         </p>
 
@@ -133,7 +153,8 @@
 
                 <div class="status paid">
 
-                    Paid
+                    <?= $transaction['payment_status']  ?>
+
 
                 </div>
 

@@ -191,22 +191,22 @@
 
                     <form action="<?= base_url('booking/summary') ?>" method="POST">
 
-                        <?= csrf_field() ?>
+                        <?= csrf_field() ?> 
 
                         <input
                             type="hidden"
                             name="destination_id"
-                            value="<?= $id ?>">
+                            value="<?= $destination_id ?>">
 
-                        <input
+                        <!-- <input
                             type="hidden"
                             name="destination_name"
-                            value="Raja Ampat">
+                            value="Raja Ampat"> -->
 
                         <input
                             type="hidden"
                             name="price"
-                            value="1500000">
+                            value="<?= $detail['price']; ?>">
 
                         <div class="row g-4">
 
@@ -270,18 +270,6 @@
                                     name="travel_date">
                             </div>
 
-                            <div class="col-md-6">
-                                <label class="booking-label">
-                                    Estimated Total
-                                </label>
-
-                                <input
-                                    type="text"
-                                    class="booking-input"
-                                    value="Rp 1.500.000"
-                                    readonly>
-                            </div>
-
                             <div class="col-12">
                                 <label class="booking-label">
                                     Special Notes
@@ -292,7 +280,7 @@
                                     rows="5"
                                     placeholder="Tell us anything we should know..."
                                     name="special_notes">
-                                
+
                                 </textarea>
                             </div>
 
@@ -310,16 +298,9 @@
 
                             </div>
 
-                            <div class="col-12">
-
-                                <button
-                                    class="btn-confirm-booking">
-
-                                    Confirm Booking
-
-                                </button>
-
-                            </div>
+                            <button class="btn-book">
+                                Confirm Booking
+                            </button>
 
                         </div>
 
@@ -338,8 +319,17 @@
                         src="https://images.unsplash.com/photo-1544551763-46a013bb70d5"
                         class="summary-image">
 
-                    <h3>
+                    <!-- <h3>
                         Rp 1.500.000
+                    </h3> -->
+
+                    <h3>
+                        Rp <?= number_format(
+                                $detail['price'],
+                                0,
+                                ',',
+                                '.'
+                            ); ?>
                     </h3>
 
                     <span class="price-subtitle">
@@ -379,9 +369,9 @@
 
                     </div>
 
-                    <button class="btn-book">
+                    <!-- <button class="btn-book">
                         Confirm Booking
-                    </button>
+                    </button> -->
 
                 </div>
 

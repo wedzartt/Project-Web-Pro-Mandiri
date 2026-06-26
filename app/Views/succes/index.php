@@ -4,6 +4,8 @@
 
 <section class="success-page">
 
+
+
     <div class="container">
 
         <div class="success-wrapper">
@@ -50,7 +52,7 @@
 
                     <strong>
 
-                        adwad
+                        <?= $booking['destination_id'] ?>
 
                     </strong>
 
@@ -72,16 +74,74 @@
                 <div class="booking-row">
 
                     <span>
+                        Full Name
+                    </span>
+
+                    <strong>
+
+                        <?= $booking['fullname'] ?>
+
+                    </strong>
+
+                </div>
+
+                <div class="booking-row">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+
+                        <?= $booking['email'] ?>
+
+                    </strong>
+
+                </div>
+
+                <div class="booking-row">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+
+                        <?= $booking['phone'] ?>
+
+                    </strong>
+
+                </div>
+
+
+                <div class="booking-row">
+
+                    <span>
                         Travel Date
                     </span>
 
                     <strong>
 
-                        sdaawd
+                        <?= $booking['travel_date'] ?>
 
                     </strong>
 
                 </div>
+
+                <div class="booking-row">
+
+                    <span>
+                        Special Notes
+                    </span>
+
+                    <strong>
+
+                        <?= $booking['special_notes'] ?>
+
+                    </strong>
+
+                </div>
+
 
                 <div class="booking-row">
 
@@ -91,7 +151,7 @@
 
                     <strong>
 
-                        sdadwa
+                        <?= $booking['travelers'] ?>
 
                         Person
 
@@ -107,7 +167,7 @@
 
                     <strong>
 
-                        adwda
+                        <?= $transaction['payment_method'] ?>
 
                     </strong>
 
@@ -120,36 +180,62 @@
                     </span>
 
                     <strong>
-
-                        adwad
-
+                        Rp <?= number_format(
+                                $booking['total_price'],
+                                0,
+                                ',',
+                                '.'
+                            ); ?>
                     </strong>
 
                 </div>
 
-                <div class="success-actions">
+                <form>
 
-                <a href="<?= base_url('my-journey') ?>"
-                    class="btn-primary">
+                    <div class="success-actions">
 
-                    View My Journey
+                        <a href="<?= base_url('my-journey/' . $transaction['id']) ?>"
+                            class="btn-primary">
 
-                </a>
+                            View My Journey
 
-                <a href="<?= base_url('/') ?>"
-                    class="btn-secondary">
+                        </a>
 
-                    Back to Home
+                        <a href="<?= base_url('/') ?>"
+                            class="btn-secondary">
 
-                </a>
+                            Back to Home
 
-            </div>
+                        </a>
+
+                    </div>
+
+                </form>
+
+                <!-- <div class="success-actions">
+
+                    <a href="<?= base_url('my-journey') ?>"
+                        class="btn-primary">
+
+                        View My Journey
+
+                    </a>
+
+                    <a href="<?= base_url('/') ?>"
+                        class="btn-secondary">
+
+                        Back to Home
+
+                    </a>
+
+                </div> -->
 
             </div>
 
         </div>
 
     </div>
+
 
 </section>
 

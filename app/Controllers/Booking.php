@@ -2,70 +2,95 @@
 
 namespace App\Controllers;
 
+use App\Models\BookingModel;
+
 class Booking extends BaseController
 {
 
-    // public function proses()
-    // {
-    //     // Mengambil semua data yang dikirim via POST
-    //     $dataKirim = $this->request->getPost();
-
-    //     // Debugging: Program berhenti di sini dan menampilkan isi variabel
-    //     // dd($dataKirim);
-        
-    //     // Kode di bawah ini tidak akan jalan selama ada dd() di atas
-    //     // return redirect()->to('/form'); 
-
-    //     return view(
-    //         'booking/summary',
-    //         $dataKirim
-    //     );
-    // }
-
     public function summary()
     {
+    // dd($_POST);
+   
+        $travelers = $this->request->getPost('travelers');
+
+        $ticketPrice = $this->request->getPost('price');
+
+        $totalPrice =  $travelers * $ticketPrice;
+
+        $bookingModel = new BookingModel();
+    
+        $bookingModel -> save([
+
+            'destination_id'
+            => $this->request->getPost('destination_id'),
+
+            'fullname'
+            => $this->request->getPost('fullname'),
+
+            'email'
+            => $this->request->getPost('email'),
+
+            'phone'
+            => $this->request->getPost('phone'),
+
+            'travel_date'
+            => $this->request->getPost('travel_date'),
+
+            'travelers' => $travelers,
+
+            'total_price' => $totalPrice,
+
+            'special_notes'
+            => $this->request->getPost('special_notes'),
+        ]);
+
+        $bookingId = $bookingModel->getInsertID();
+
+        // dd($bookingId);
+
+        // Ambil semua data yang dikirim dari form POST
         // $dataKirim = $this->request->getPost();
+
+        // STOP program di sini dan tampilkan isi datanya ke layar
         // dd($dataKirim);
 
         $data = [
-
-            'title' => 'Journey Summary',
-            'page'  => 'summary',
-
             'destination_id'
-                => $this->request->getPost('destination_id'),
-
-            'destination_name'
-                => $this->request->getPost('destination_name'),
-
-            'price'
-                => $this->request->getPost('price'),
-
-            'travel_date'
-                => $this->request->getPost('travel_date'),
-
-            'travelers'
-                => $this->request->getPost('travelers'),
+            => $this->request->getPost('destination_id'),
 
             'fullname'
-                => $this->request->getPost('fullname'),
+            => $this->request->getPost('fullname'),
 
             'email'
-                => $this->request->getPost('email'),
+            => $this->request->getPost('email'),
 
             'phone'
-                => $this->request->getPost('phone'),
+            => $this->request->getPost('phone'),
 
-            // 'notes'
-            //     => $this->request->getPost('notes'),
+            'travel_date'
+            => $this->request->getPost('travel_date'),
+
+            'travelers' => $travelers,
+
+            'total_price' => $totalPrice,
 
             'special_notes'
-                => $this->request->getPost('special_notes'),
+            => $this->request->getPost('special_notes'),
         ];
 
-        return view(
-            'booking/summary',
-            $data
-        );
+        // dd($data);
+
+        return redirect()->to('/payment/' . $bookingId);
+    }
+
+    public function method($id)
+    {
+        $bookingModel = new BookingModel();
+
+        $order = $bookingModel->find($id);
+
+        return view('payment/index', [
+            'order' => $order
+        ]);
     }
 }

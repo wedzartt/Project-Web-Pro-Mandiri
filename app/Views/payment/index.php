@@ -4,213 +4,211 @@
 
 <section class="payment-page">
 
-    <div class="container">
+    <form
+        action="<?= base_url('payment/process') ?>"
+        method="POST">
 
-        <!-- HEADER -->
+        <?= csrf_field() ?>
 
-        <div class="payment-header">
+        <input
+            type="hidden"
+            name="booking_id"
+            value="<?= $booking['id'] ?>">
 
-            <span class="payment-badge">
+        <div class="container">
 
-                Secure Payment
+            <!-- HEADER -->
 
-            </span>
+            <div class="payment-header">
 
-            <h1>
+                <span class="payment-badge">
+                    Secure Payment
+                </span>
 
-                Choose Payment Method
+                <h1>
+                    Choose Payment Method
+                </h1>
 
-            </h1>
-
-            <p>
-
-                Select your preferred payment method
-                to complete your booking.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- LEFT -->
-
-            <div class="col-lg-8">
-
-                <!-- BANK TRANSFER -->
-
-                <div class="payment-card">
-
-                    <h3>
-
-                        Bank Transfer
-
-                    </h3>
-
-                    <div class="payment-grid">
-
-                        <label class="payment-option">
-
-                            <input
-                                type="radio"
-                                name="payment_method">
-
-                            <div class="option-content">
-
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg">
-
-                                <span>BCA</span>
-
-                            </div>
-
-                        </label>
-
-                        <label class="payment-option">
-
-                            <input
-                                type="radio"
-                                name="payment_method">
-
-                            <div class="option-content">
-
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg">
-
-                                <span>Mandiri</span>
-
-                            </div>
-
-                        </label>
-
-                    </div>
-
-                </div>
-
-                <!-- E-WALLET -->
-
-                <div class="payment-card">
-
-                    <h3>
-
-                        E-Wallet
-
-                    </h3>
-
-                    <div class="payment-grid">
-
-                        <label class="payment-option">
-
-                            <input
-                                type="radio"
-                                name="payment_method">
-
-                            <div class="option-content">
-
-                                <span>💙 DANA</span>
-
-                            </div>
-
-                        </label>
-
-                        <label class="payment-option">
-
-                            <input
-                                type="radio"
-                                name="payment_method">
-
-                            <div class="option-content">
-
-                                <span>🟢 GoPay</span>
-
-                            </div>
-
-                        </label>
-
-                        <label class="payment-option">
-
-                            <input
-                                type="radio"
-                                name="payment_method">
-
-                            <div class="option-content">
-
-                                <span>🟣 OVO</span>
-
-                            </div>
-
-                        </label>
-
-                    </div>
-
-                </div>
+                <p>
+                    Select your preferred payment method
+                    to complete your booking.
+                </p>
 
             </div>
 
-            <!-- RIGHT -->
+            <div class="row g-4">
 
-            <div class="col-lg-4">
+                <!-- LEFT -->
 
-                <div class="order-card">
+                <div class="col-lg-8">
 
-                    <div class="booking-code">
+                    <!-- BANK TRANSFER -->
 
-                        BOOK-20260614-001
+                    <div class="payment-card">
+
+                        <h3>Bank Transfer</h3>
+
+                        <div class="payment-grid">
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="BCA"
+                                    required>
+
+                                <div class="option-content">
+
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg">
+
+                                    <span>BCA</span>
+
+                                </div>
+
+                            </label>
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="Mandiri">
+
+                                <div class="option-content">
+
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg">
+
+                                    <span>Mandiri</span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
 
                     </div>
 
-                    <h3>
+                    <!-- E WALLET -->
 
-                        Order Summary
+                    <div class="payment-card">
 
-                    </h3>
+                        <h3>E-Wallet</h3>
 
-                    <div class="summary-row">
+                        <div class="payment-grid">
 
-                        <span>Destination</span>
+                            <label class="payment-option">
 
-                        <span>Raja Ampat</span>
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="DANA">
+
+                                <div class="option-content">
+
+                                    <span>💙 DANA</span>
+
+                                </div>
+
+                            </label>
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="GoPay">
+
+                                <div class="option-content">
+
+                                    <span>🟢 GoPay</span>
+
+                                </div>
+
+                            </label>
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="OVO">
+
+                                <div class="option-content">
+
+                                    <span>🟣 OVO</span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
 
                     </div>
 
-                    <div class="summary-row">
+                </div>
 
-                        <span>Travelers</span>
+                <!-- RIGHT -->
 
-                        <span>2 Person</span>
+                <div class="col-lg-4">
 
-                    </div>
+                    <div class="order-card">
 
-                    <div class="summary-row">
+                        <div class="booking-code">
+                            <?= $booking['id'] ?>
+                        </div>
 
-                        <span>Total</span>
+                        <h3>
+                            Order Summary
+                        </h3>
 
-                        <span class="total">
+                        <div class="summary-row">
 
-                            Rp 3.050.000
+                            <span>Name</span>
 
-                        </span>
+                            <span>
+                                <?= $booking['fullname'] ?>
+                            </span>
 
-                    </div>
+                        </div>
 
-                    <form
-                        action="<?= base_url('/succes') ?>"
-                        method="POST">
+                        <div class="summary-row">
 
-                        <?= csrf_field() ?>
+                            <span>Travelers</span>
+
+                            <span>
+                                <?= $booking['travelers'] ?>
+                            </span>
+
+                        </div>
+
+                        <div class="summary-row">
+
+                            <span>Total</span>
+
+                            <span class="total">
+
+                                Rp
+                                <?= number_format(
+                                    $booking['total_price'],
+                                    0,
+                                    ',',
+                                    '.'
+                                ) ?>
+
+                            </span>
+
+                        </div>
 
                         <button
+                            type="submit"
                             class="btn-payment">
 
                             Pay Now
 
                         </button>
 
-                    </form>
-
-                    <!-- <button class="btn-pay">
-
-                        Pay Now
-
-                    </button> -->
+                    </div>
 
                 </div>
 
@@ -218,7 +216,7 @@
 
         </div>
 
-    </div>
+    </form>
 
 </section>
 
