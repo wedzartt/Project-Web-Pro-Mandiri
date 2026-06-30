@@ -23,7 +23,7 @@ class Wisata extends BaseController
 
                 'ticket_type' => 'DAY 1',
 
-                'price' => 350000
+                'price' => 1500000
 
             ];
         } elseif ($destinationsId == 2) {
@@ -31,7 +31,7 @@ class Wisata extends BaseController
 
                 'ticket_type' => 'DAY 2',
 
-                'price' => 450000
+                'price' => 750000
 
             ];
         } elseif ($destinationsId == 3) {
@@ -39,7 +39,7 @@ class Wisata extends BaseController
 
                 'ticket_type' => 'DAY 2',
 
-                'price' => 550000
+                'price' => 1200000
 
             ];
         } else {

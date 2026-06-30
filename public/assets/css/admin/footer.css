@@ -1,0 +1,30 @@
+
+/* ==================================
+   FOOTER
+================================== */
+
+.admin-footer{
+    height:60px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #02153d,
+        #03255d
+    );
+
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    font-size:15px;
+}
+
+.admin-footer a{
+    color:#9ecbff;
+    text-decoration:none;
+}

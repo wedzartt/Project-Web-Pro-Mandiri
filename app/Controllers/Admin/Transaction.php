@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
-class Wisata extends BaseController
+class Transaction extends BaseController
 {
     public function index()
     {
@@ -13,7 +13,7 @@ class Wisata extends BaseController
         ];
 
         return view(
-            'admin/wisata',
+            'admin/transaction',
             $data
         );
     }

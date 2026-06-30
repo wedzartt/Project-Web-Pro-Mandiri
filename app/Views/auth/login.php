@@ -47,9 +47,19 @@
 
         <!-- RIGHT -->
 
+        <?php if(session()->getFlashdata('error')) : ?>
+
+                <div class="alert-error">
+
+                    <?= session()->getFlashdata('error') ?>
+
+                </div>
+
+        <?php endif; ?>
+
         <div class="auth-form-wrapper">
 
-            <form action="<?= base_url('/') ?>"
+            <form action="<?= base_url('login') ?>"
                   method="post"
                   class="auth-form">
 
@@ -85,7 +95,7 @@
 
                 <button type="submit"
                         class="auth-btn"
-                        ">
+                        >
                     Login
 
                 </button>

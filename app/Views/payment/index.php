@@ -106,7 +106,9 @@
 
                                 <div class="option-content">
 
-                                    <span>💙 DANA</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg">
+
+                                    <span>DANA</span>
 
                                 </div>
 
@@ -121,7 +123,9 @@
 
                                 <div class="option-content">
 
-                                    <span>🟢 GoPay</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_Gopay.svg">
+
+                                    <span>GoPay</span>
 
                                 </div>
 
@@ -136,7 +140,26 @@
 
                                 <div class="option-content">
 
-                                    <span>🟣 OVO</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg">
+
+                                    <span>OVO</span>
+
+                                </div>
+
+                            </label>
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="Shoppe Pay">
+
+                                <div class="option-content">
+
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg">
+
+                                    <span>Shoppe Pay</span>
 
                                 </div>
 

@@ -21,6 +21,9 @@ class Booking extends BaseController
     
         $bookingModel -> save([
 
+            'user_id'
+            => session()->get('id'),
+
             'destination_id'
             => $this->request->getPost('destination_id'),
 

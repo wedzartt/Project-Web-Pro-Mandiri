@@ -143,8 +143,8 @@
                 <div class="destination-card">
 
                     <img
-                        src="https://picsum.photos/600/400?random="
-                        alt="Destination">
+                        src="<?= base_url('pict/raja_ampat_pict.jpg') ?>"
+                        alt="Raja Ampat">
 
                     <div class="destination-content">
 
@@ -170,7 +170,7 @@
                                 </small>
 
                                 <h5>
-                                    Rp 350.000
+                                    Rp 1.500.000
                                 </h5>
 
                             </div>
@@ -193,23 +193,21 @@
 
                 <div class="destination-card">
 
-                    <img
-                        src="https://picsum.photos/600/400?random="
-                        alt="Destination">
+                    <img src="<?= base_url('pict/mount_bromo_pict.jpg') ?>"
+                        alt="Mount Bromo">
 
                     <div class="destination-content">
 
                         <span class="location">
-                            📍 Papua Barat
+                            📍 East Java
                         </span>
 
                         <h3>
-                            Raja Ampat
+                            Mount Bromo
                         </h3>
 
                         <p>
-                            One of Indonesia's most beautiful
-                            marine tourism destinations.
+                            Experience Indonesia's most iconic sunrise.
                         </p>
 
                         <div class="card-bottom">
@@ -221,7 +219,7 @@
                                 </small>
 
                                 <h5>
-                                    Rp 450.000
+                                    Rp 750.000
                                 </h5>
 
                             </div>
@@ -247,22 +245,21 @@
                 <div class="destination-card">
 
                     <img
-                        src="https://picsum.photos/600/400?random="
-                        alt="Destination">
+                        src="<?= base_url('pict/labuan_bajo_pict.jpg') ?>"
+                        alt="Labuan Bajo">
 
                     <div class="destination-content">
 
                         <span class="location">
-                            📍 Papua Barat
+                            📍 Nusa Tenggara Timur
                         </span>
 
                         <h3>
-                            Raja Ampat
+                            Labuan Bajo
                         </h3>
 
                         <p>
-                            One of Indonesia's most beautiful
-                            marine tourism destinations.
+                            Gateway to Komodo National Park.
                         </p>
 
                         <div class="card-bottom">
@@ -274,7 +271,7 @@
                                 </small>
 
                                 <h5>
-                                    Rp 550.000
+                                    Rp 1.200.000
                                 </h5>
 
                             </div>

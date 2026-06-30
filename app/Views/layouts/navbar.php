@@ -44,11 +44,42 @@
                     </a>
                 </li>
 
+                <?php if(session()->get('login')) : ?>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="<?= base_url('/my-journey') ?>">
+                            My Journey
+                        </a>
+                    </li>
+
+                <?php endif; ?>
+
             </ul>
 
-            <a href="<?= base_url('/login') ?>" class="btn-login">
-                Login
-            </a>
+            <?php if(session()->get('login')) : ?>
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="user-name">
+                        Hi, <?= session()->get('name') ?>
+                    </span>
+
+                    <a href="<?= base_url('/logout') ?>"
+                       class="btn-login">
+                        Logout
+                    </a>
+
+                </div>
+
+            <?php else : ?>
+
+                <a href="<?= base_url('/login') ?>"
+                   class="btn-login">
+                    Login
+                </a>
+
+            <?php endif; ?>
 
         </div>
     </div>

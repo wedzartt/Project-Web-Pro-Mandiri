@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Wisata extends BaseController
+class Succes extends BaseController
 {
     public function success()
     {

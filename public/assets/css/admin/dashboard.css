@@ -1,0 +1,294 @@
+/* ==================================
+   GLOBAL
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    overflow-x:hidden;
+}
+
+.admin-wrapper{
+    display:flex;
+    /* min-height:100vh; */
+}
+
+/* ==================================
+   MAIN CONTENT DASHBOARD
+================================== */
+
+.main-content{
+    margin-left:280px;
+    flex:1;
+    /* min-height:100vh; */
+    background:#f4f7fc;
+}
+
+
+/* ==================================
+   CONTENT
+================================== */
+
+.content-wrapper{
+    padding:35px;
+    min-height:calc(100vh - 170px);
+}
+
+
+/* DASHBOARD */
+/* ===================================
+   DASHBOARD WRAPPER
+=================================== */
+
+.dashboard-wrapper{
+    padding:35px;
+}
+
+/* ===================================
+   STAT CARD
+=================================== */
+
+.card-stat{
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:
+        0 10px 30px rgba(
+            15,
+            23,
+            42,
+            .06
+        );
+
+    transition:.3s;
+
+    border-left:
+        5px solid #2563eb;
+
+    height:140px;
+}
+
+.card-stat:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(
+            15,
+            23,
+            42,
+            .12
+        );
+}
+
+/* warna card */
+
+.card-stat.revenue{
+    border-left:
+        5px solid #10b981;
+}
+
+.card-stat.user{
+    border-left:
+        5px solid #0ea5e9;
+}
+
+.card-stat.pending{
+    border-left:
+        5px solid #f59e0b;
+}
+
+/* icon */
+
+.stat-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+}
+
+.card-stat h6{
+    color:#64748b;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    font-weight:500;
+}
+
+.card-stat h2{
+    color:#0f172a;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin:0;
+}
+
+/* ===================================
+   TABLE WRAPPER
+=================================== */
+
+.table-wrapper{
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+        0 10px 30px rgba(
+            15,
+            23,
+            42,
+            .06
+        );
+}
+
+.table-title{
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:25px;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.admin-table{
+    margin:0;
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+.admin-table thead th{
+    border:none;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:0 20px 15px;
+}
+
+.admin-table tbody tr{
+    background:#f8fafc;
+
+    transition:.3s;
+}
+
+.admin-table tbody tr:hover{
+    background:#eff6ff;
+
+    transform:scale(1.01);
+}
+
+.admin-table tbody td{
+    padding:20px;
+
+    border:none;
+
+    color:#0f172a;
+
+    vertical-align:middle;
+}
+
+.admin-table tbody tr td:first-child{
+    border-radius:15px 0 0 15px;
+}
+
+.admin-table tbody tr td:last-child{
+    border-radius:0 15px 15px 0;
+}
+
+/* ===================================
+   STATUS
+=================================== */
+
+.status{
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    display:inline-block;
+}
+
+.status.paid{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.status.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.status.cancelled{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+    .dashboard-wrapper{
+        padding:20px;
+    }
+
+    .card-stat{
+        height:auto;
+        padding:22px;
+    }
+
+    .card-stat h2{
+        font-size:28px;
+    }
+
+    .table-wrapper{
+        overflow-x:auto;
+    }
+}

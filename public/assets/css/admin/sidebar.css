@@ -1,0 +1,154 @@
+
+/* ==================================
+   SIDEBAR
+================================== */
+
+.sidebar{
+    width:280px;
+    height:100vh;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:35px 25px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #02153d 0%,
+        #03255d 50%,
+        #063c87 100%
+    );
+
+    box-shadow:
+        5px 0 30px rgba(0,0,0,.15);
+
+    z-index:999;
+}
+
+.sidebar-logo{
+    margin-bottom:60px;
+}
+
+.sidebar-logo h1{
+    font-size:52px;
+    font-weight:800;
+    color:white;
+    margin-bottom:10px;
+}
+
+.sidebar-logo span{
+    color:#79b7ff;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.sidebar-menu{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar-menu li{
+    margin-bottom:15px;
+}
+
+.sidebar-menu a{
+    display:flex;
+    align-items:center;
+
+    height:58px;
+
+    padding:0 25px;
+
+    color:#dbeafe;
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-size:18px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu .active{
+    background:
+    linear-gradient(
+        135deg,
+        #1da1ff,
+        #2563eb
+    );
+
+    box-shadow:
+        0 10px 25px rgba(
+            37,
+            99,
+            235,
+            .35
+        );
+
+    color:white;
+}
+
+/* ==================================
+   PROFILE
+================================== */
+
+.sidebar-profile{
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid
+        rgba(255,255,255,.1);
+
+    border-radius:22px;
+
+    padding:20px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.sidebar-profile .avatar{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1da1ff,
+        #2563eb
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:20px;
+    font-weight:700;
+}
+
+.sidebar-profile h6{
+    margin:0;
+    color:white;
+    font-size:17px;
+}
+
+.sidebar-profile span{
+    color:#9fb8e4;
+    font-size:13px;
+}
+

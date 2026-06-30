@@ -48,7 +48,7 @@
 
                 <div class="hero-card">
 
-                    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800"
+                    <img src="<?= base_url('pict/raja_ampat_pict.jpg') ?>"
                          alt="Raja Ampat">
 
                     <div class="hero-card-content">
@@ -225,7 +225,7 @@
 
                 <div class="destination-card">
 
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200"
+                    <img src="<?= base_url('pict/raja_ampat_pict.jpg') ?>"
                          alt="Raja Ampat">
 
                     <div class="destination-content">
@@ -258,7 +258,7 @@
 
                             </div>
 
-                            <a href="#" class="btn-destination">
+                            <a href="<?= base_url('destinations/1') ?>" class="btn-destination">
                                 Explore
                             </a>
 
@@ -276,7 +276,7 @@
 
                 <div class="destination-card">
 
-                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200"
+                    <img src="<?= base_url('pict/mount_bromo_pict.jpg') ?>"
                          alt="Bromo">
 
                     <div class="destination-content">
@@ -309,7 +309,7 @@
 
                             </div>
 
-                            <a href="#" class="btn-destination">
+                            <a href="<?= base_url('destinations/2') ?>" class="btn-destination">
                                 Explore
                             </a>
 
@@ -327,7 +327,7 @@
 
                 <div class="destination-card">
 
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200"
+                    <img src="<?= base_url('pict/labuan_bajo_pict.jpg') ?>"
                          alt="Labuan Bajo">
 
                     <div class="destination-content">
@@ -360,7 +360,7 @@
 
                             </div>
 
-                            <a href="#" class="btn-destination">
+                            <a href="<?= base_url('destinations/3') ?>" class="btn-destination">
                                 Explore
                             </a>
 
@@ -400,8 +400,7 @@
 
                 <div class="event-card">
 
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800"
-                         alt="Festival">
+                    <img src="<?= base_url('pict/bali_arts_festival_pict.jpg') ?>">
 
                     <div class="event-content">
 
@@ -431,7 +430,7 @@
 
                 <div class="event-card">
 
-                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+                    <img src="<?= base_url('pict/dieng_pict.jpg') ?>"
                          alt="Festival">
 
                     <div class="event-content">
@@ -462,7 +461,7 @@
 
                 <div class="event-card">
 
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800"
+                    <img src="<?= base_url('pict/danau_toba_pict.png') ?>"
                          alt="Festival">
 
                     <div class="event-content">

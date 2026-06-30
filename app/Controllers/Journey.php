@@ -2,29 +2,50 @@
 
 namespace App\Controllers;
 
-use App\Models\BookingModel;
-use App\Models\TransactionModel;
-
 class Journey extends BaseController
 {
-    public function index($id)
+    public function index()
     {
-        $transactionModel = new TransactionModel();
-        $bookingModel = new BookingModel();
+        $db = \Config\Database::connect();
 
-        $data = [
-        'transaction' => $transactionModel->find($id),
-        'booking' => $bookingModel->find($id)
-        ];
+        $journeys = $db->table('bookings')
 
-        // $data2['bookings'] = $bookingModel->find($id);
-        // $data1['transaction'] = $transactionModel->find($id);
+            ->select('
+                bookings.*,
+
+                transactions.id
+                    as transaction_id,
+
+                transactions.payment_method,
+
+                transactions.payment_status
+            ')
+
+            ->join(
+                'transactions',
+                'transactions.booking_id = bookings.id',
+                'left'
+            )
+
+            ->where(
+                'bookings.user_id',
+                session()->get('id')
+            )
+
+            ->orderBy(
+                'bookings.id',
+                'DESC'
+            )
+
+            ->get()
+
+            ->getResultArray();
 
         return view(
-            'journey/index', $data,
+            'journey/index',
             [
-                'title' => 'My Journey',
-                'page'  => 'Journey',
+                'journeys' => $journeys,
+                'title' => 'My Journey'
             ]
         );
     }
